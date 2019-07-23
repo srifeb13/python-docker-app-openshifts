@@ -2,6 +2,11 @@
 FROM python:latest
 
 MAINTAINER MANIVANNAN.C
+
+RUN groupadd -g 999 appuser && \
+    useradd -r -u 999 -g appuser appuser
+USER appuser
+
 # Set the working directory to /app
 WORKDIR /app
 
