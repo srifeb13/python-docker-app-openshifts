@@ -10,11 +10,10 @@ node{
     }
    
    stage("Tag & Push image"){
-      withDockerRegistry([credentialsId: 'dockerID',, url: ""]) {
-         app.push("manee2k6/itrainavenger:latest")
-          //sh 'docker tag manee2k6/itrainavenger manee2k6/itrainavenger:001'
-          //sh 'docker push manee2k6/itrainavenger:001'
-          //sh 'docker push manee2k6/itrainavenger:latest'
+      withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
+          sh 'docker tag manee2k6/itrainavenger manee2k6/itrainavenger:001'
+          sh 'docker push manee2k6/itrainavenger:001'
+          sh 'docker push manee2k6/itrainavenger:latest'
       }
     }
    
