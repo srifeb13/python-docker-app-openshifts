@@ -11,9 +11,9 @@ node{
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
-          sh 'docker tag dockerhub/itrainavenger dockerhub/itrainavenger:001'
-          sh 'docker push dockerhub/itrainavenger:001'
-          sh 'docker push dockerhub/itrainavenger:latest'
+          sh 'docker tag vickeyreddy/itrainavenger vickeyreddy/itrainavenger:001'
+          sh 'docker push vickeyreddy/itrainavenger:001'
+          sh 'docker push vickeyreddy/itrainavenger:latest'
       }
     }
    
