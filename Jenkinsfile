@@ -2,7 +2,7 @@ node{
    
    stage("App Build started"){
       echo 'App build started..'
-      git credentialsId: 'Github-ID', url: 'https://github.com/pattaabhi/python-docker-app.git'
+      git credentialsId: 'Github-ID', url: ''
       }
    
    stage('Docker Build') {
@@ -11,9 +11,10 @@ node{
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID']) {
-          sh 'docker tag manee2k6/itrainavenger manee2k6/itrainavenger:001'
-          sh 'docker push manee2k6/itrainavenger:001'
-          sh 'docker push manee2k6/itrainavenger:latest'
+          app.push()
+          //sh 'docker tag manee2k6/itrainavenger manee2k6/itrainavenger:001'
+          //sh 'docker push manee2k6/itrainavenger:001'
+          //sh 'docker push manee2k6/itrainavenger:latest'
       }
     }
    
