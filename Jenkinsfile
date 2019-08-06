@@ -20,7 +20,7 @@ node{
    stage("App deployment started"){
      sh 'oc login --token=U0mNHuUe1VMJNXU7UplhPs46ywPnq6FGfz0cMlQcSuQ --server=https://api.us-east-2.online-starter.openshift.com:6443'
      //sh 'oc new project padmavathy'
-     sh 'oc import-image manee2k6/python-app:pattabhi-1.0 --name python-app'
+     sh 'oc import-image manee2k6/itrainavenger:dev --name python-app'
      sh 'oc expose svc python-app --name=python-app'
      sh 'oc status'
     }
