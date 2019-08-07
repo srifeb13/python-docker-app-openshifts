@@ -16,7 +16,7 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV NAME ItrainWorld
+ENV NAME TB1
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
