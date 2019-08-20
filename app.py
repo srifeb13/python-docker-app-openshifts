@@ -15,10 +15,10 @@ def hello():
     except RedisError:
         visits = "<i>cannot connect to Redis, counter disabled</i>"
 
-    html = "<h3>Hello {name} itrainSpartans team welcome to Docker World..!</h3>" \
+    html = "<h3>Hello {name} team welcome to Docker World..!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}"
-    return html.format(name=os.getenv("NAME", "itrainSpartans"), hostname=socket.gethostname(), visits=visits)
+    return html.format(name=os.getenv("NAME", "itrainBatman"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=6000)
+    app.run(host='0.0.0.0', port=5000)
