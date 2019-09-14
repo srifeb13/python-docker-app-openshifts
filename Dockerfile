@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:latest
+FROM manee2k6/python:latest
 
 MAINTAINER MANIVANNAN.C
 
@@ -13,7 +13,7 @@ ADD . /app
 RUN pip install -r requirements.txt
 
 # Install python newrelic agent on this docker image
-RUN pip install newrelic
+#RUN pip install newrelic ( to avoid this layer, added newrelic inside requirement.txt)
 
 # Make port 80 available to the world outside this container
 EXPOSE 5000
