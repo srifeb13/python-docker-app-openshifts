@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM SRIFEB13/python:latest
+FROM python:latest
 
 MAINTAINER SRIDHAR
 
