@@ -1,8 +1,6 @@
 # Use an official Python runtime as a parent image
 FROM SRIFEB13/python:latest
 
-LABEL DEVDEMOBUILD
-
 MAINTAINER SRIDHAR
 
 # Set the working directory to /app
