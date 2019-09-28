@@ -10,7 +10,7 @@ node{
     }
    
    stage("Tag & Push image"){
-      withDockerRegistry([credentialsId: 'dockerID',url: 'https://cloud.docker.com/u/itrainsri/repository/registry-1.docker.io/itrainsri/docker-images']) {
+      withDockerRegistry([credentialsId: 'dockerID',url: 'https://cloud.docker.com/repository/registry-1.docker.io/srifeb13']) {
           sh 'docker tag srifeb13/itrain-padman-py-app srifeb13/itrain-padman-py-app:dev'
           sh 'docker push srifeb13/itrain-padman-py-app:dev'
           sh 'docker push srifeb13/itrain-padman-py-app:latest'
